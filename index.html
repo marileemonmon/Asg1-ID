@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concert Ticket Wireframe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="top-nav">
+      <h1 class="logo">ConcertSite</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#tickets">Tickets</a></li>
+        <li><a href="#venues">Venues</a></li>
+        <li><a href="#signin">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="screen">
+      <h2 class="screen-title">Home page</h2>
+
+      <div class="home-hero">
+        <div class="box box-large"></div>
+        <div class="box box-large"></div>
+      </div>
+
+      <section id="tickets" class="tickets-section">
+        <h3 class="sub-title">Tickets</h3>
+
+        <div class="tickets-layout">
+          <div class="box box-large"></div>
+
+          <aside class="ticket-side">
+            <div class="box box-small"></div>
+            <ul class="ticket-info-list">
+              <li class="line"></li>
+              <li class="line"></li>
+              <li class="line"></li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="venues-section">
+        <h3 class="sub-title">Venues</h3>
+
+        <div class="venues-layout">
+          <div class="box box-large"></div>
+          <div class="box box-large"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- DETAILS ABOUT ARTIST -->
+    <section id="details" class="screen">
+      <h2 class="screen-title">Details about artist</h2>
+
+      <div class="details-layout">
+        <article class="details-main">
+          <div class="box box-medium"></div>
+          <div class="box box-medium"></div>
+          <div class="box box-large"></div>
+        </article>
+
+        <aside class="details-side">
+          <div class="box box-large"></div>
+          <div class="box box-medium"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CARD DETAILS -->
+    <section id="card" class="screen">
+      <h2 class="screen-title">Card details</h2>
+
+      <button class="btn back-btn" type="button">Back</button>
+
+      <form class="form">
+        <label for="card-name">Card Name</label>
+        <input id="card-name" class="input" type="text" placeholder="Name on card" required>
+
+        <label for="card-number">Card Number</label>
+        <input id="card-number" class="input" type="text" placeholder="xxxx xxxx xxxx xxxx" required>
+
+        <label for="expiry">Expiry</label>
+        <input id="expiry" class="input" type="month" required>
+
+        <label for="cvv">CVV</label>
+        <input id="cvv" class="input" type="password" maxlength="4" required>
+
+        <button class="btn" type="button" id="applePayButton">
+          Pay with Apple&nbsp;Pay
+        </button>
+      </form>
+    </section>
+
+    <!-- APPLE PAY SUCCESS -->
+    <section id="applepay" class="screen">
+      <h2 class="screen-title">javascript_Apple pay</h2>
+
+      <button class="btn back-btn" type="button">Back</button>
+
+      <div class="apple-message box box-medium">
+        <p id="applePayMessage">Apple Pay is successful</p>
+      </div>
+    </section>
+
+    <!-- SIGN IN -->
+    <section id="signin" class="screen">
+      <h2 class="screen-title">Sign In</h2>
+
+      <form class="form">
+        <label for="email">Email</label>
+        <input id="email" class="input" type="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" class="input" type="password" required>
+
+        <button class="btn" type="submit">Sign In</button>
+
+        <p class="small-text">Don't have an account?</p>
+        <button class="btn" type="button">Sign Up</button>
+      </form>
+    </section>
+
+    <!-- VENUES PAGE (separate screen like your last frame) -->
+    <section id="venues" class="screen">
+      <h2 class="screen-title">Venues</h2>
+
+      <div class="venues-layout">
+        <div class="box box-large"></div>
+        <div class="box box-large"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="small-text">&copy; 2025 Concert Wireframe</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
