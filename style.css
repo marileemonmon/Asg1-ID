@@ -21,7 +21,7 @@ body {
 /* ----- HEADER + NAV ----- */
 
 .site-header {
-  background-color: #9712a0; /* banner colour */
+  background-color: #8d00ce; /* banner colour */
   width: 100%;
 }
 
@@ -209,6 +209,13 @@ input[type="number"] {
 .details-right p {
   margin-bottom: 12px;
 }
+.details_video {
+  width: 100%;        /* fill the white box */
+  height: 315px;      /* fixed height */
+  margin-top: 12px;   /* space above the video */
+  border-radius: 6px; /* rounded corners to match images */
+}
+
 @media screen and (max-width: 600px) {
   .details-layout {
     flex-direction: column;  /* stack images on top of text */
