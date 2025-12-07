@@ -1,6 +1,4 @@
 
-okay what about my css
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -266,7 +264,7 @@ input[type="number"] {
 /* Card details side-by-side fields */
 .card-grid {
   display: flex;
-  gap: 12px;
+  gap: 24px;
 }
 .ticket-btn {
   margin-top: 20px;   /* adds gap between prices and button */
