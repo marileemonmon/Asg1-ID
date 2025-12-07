@@ -52,7 +52,33 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-size: 14px;
+  white-space: nowrap;   
 }
+/* Mobile header layout */
+@media screen and (max-width: 600px) {
+
+  /* Stack brand on top, menu below */
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-brand {
+    margin-bottom: 4px;  /* small gap below "Concert" */
+  }
+
+  .nav-list {
+    flex-wrap: wrap;     /* allow items to go to next row */
+    justify-content: center;
+    gap: 8px;           /* space between menu items */
+  }
+
+  .nav-list a {
+    font-size: 12px;     /* keep readable */
+    white-space: nowrap; /* keep each label on one line */
+  }
+}
+
 
 .nav-list a:hover {
   text-decoration: underline;
@@ -182,42 +208,40 @@ input[type="number"] {
 
 /* VENUES SECTION */
 
+/* ------------ VENUES LAYOUT ------------ */
+/* DESKTOP / DEFAULT LAYOUT – side by side */
 .venues-layout {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;   /* row by default */
+  gap: 16px;
 }
 
 .venues-left {
-  background-color: #3a2d3f;
-  min-height: 260px;
-  border-radius: 6px;
+  flex: 2;
 }
 
 .venues-right {
-  padding: 16px;
+  flex: 1;
   background-color: #ffffff;
   color: #000000;
+  padding: 16px;
   border-radius: 6px;
 }
-
-/* ----- DESKTOP LAYOUT ----- */
-
-@media screen and (min-width: 768px) {
-  
-  main {
-    padding: 40px;
-  }
+/* MOBILE LAYOUT – stack top and bottom like wireframe */
+@media screen and (max-width: 600px) {
 
   .venues-layout {
-    flex-direction: row;
+    flex-direction: column;   /* column on small screens */
   }
 
-  .venues-left {
-    flex: 2;
+  .venues-left,
+  .venues-right {
+    width: 100%;              /* full width */
   }
 
   .venues-right {
-    flex: 1;
+    margin-top: 16px;         /* gap between image and white box */
   }
 }
+
+
