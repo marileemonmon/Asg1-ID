@@ -217,6 +217,7 @@ input[type="number"] {
   height: 315px;      /* fixed height */
   margin-top: 12px;   /* space above the video */
   border-radius: 6px; /* rounded corners to match images */
+  border: none;
 }
 
 @media screen and (max-width: 600px) {
