@@ -1,4 +1,6 @@
 
+okay what about my css
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +23,7 @@ body {
 /* ----- HEADER + NAV ----- */
 
 .site-header {
-  background-color: #8d00ce; /* banner colour */
+  background-color: #7f0088; /* banner colour */
   width: 100%;
 }
 
@@ -209,7 +211,8 @@ input[type="number"] {
 .details-right p {
   margin-bottom: 12px;
 }
-.details_video {
+
+.details-video {
   width: 100%;        /* fill the white box */
   height: 315px;      /* fixed height */
   margin-top: 12px;   /* space above the video */
@@ -227,8 +230,12 @@ input[type="number"] {
 }
 
 /* ----- TICKETS LAYOUT ----- */
-
 .ticket-list {
+  list-style: none;
+  margin: 12px 0 24px;
+}
+
+.ticket-list li {
   height: 16px;
   background-color: #d4d3d3;
   margin-bottom: 8px;
