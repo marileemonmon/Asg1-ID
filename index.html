@@ -2,142 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Concert Ticket Wireframe</title>
+  <title>Concert Booking</title>
+  <!-- make sure your CSS file name is EXACTLY "style.css" -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <nav class="top-nav">
-      <h1 class="logo">ConcertSite</h1>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#details">Details</a></li>
-        <li><a href="#tickets">Tickets</a></li>
-        <li><a href="#venues">Venues</a></li>
-        <li><a href="#signin">Sign In</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- HOME PAGE -->
-    <section id="home" class="screen">
-      <h2 class="screen-title">Home page</h2>
-
-      <div class="home-hero">
-        <div class="box box-large"></div>
-        <div class="box box-large"></div>
-      </div>
-
-      <section id="tickets" class="tickets-section">
-        <h3 class="sub-title">Tickets</h3>
-
-        <div class="tickets-layout">
-          <div class="box box-large"></div>
-
-          <aside class="ticket-side">
-            <div class="box box-small"></div>
-            <ul class="ticket-info-list">
-              <li class="line"></li>
-              <li class="line"></li>
-              <li class="line"></li>
-            </ul>
-          </aside>
+    <header class="site-header">
+        <div class="page-container">
+            <nav class="main-nav">
+                <div class="nav-brand">Concert</div>
+                <ul class="nav-list">
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('details')">Details about artist</a></li>
+                    <li><a href="#" onclick="showSection('tickets')">Tickets</a></li>
+                    <li><a href="#" onclick="showSection('venues')">Venues</a></li>
+                    <li><a href="#" onclick="showSection('signin')">Sign In</a></li>
+                </ul>
+            </nav>
         </div>
-      </section>
+    </header>
 
-      <section class="venues-section">
-        <h3 class="sub-title">Venues</h3>
+    <div class="page-container">
 
-        <div class="venues-layout">
-          <div class="box box-large"></div>
-          <div class="box box-large"></div>
-        </div>
-      </section>
-    </section>
+    <main>
 
-    <!-- DETAILS ABOUT ARTIST -->
-    <section id="details" class="screen">
-      <h2 class="screen-title">Details about artist</h2>
+      <!-- HOME -->
+        <section id="home" class="page-section">
+            <h1 class="page-title">Home</h1>
 
-      <div class="details-layout">
-        <article class="details-main">
-          <div class="box box-medium"></div>
-          <div class="box box-medium"></div>
-          <div class="box box-large"></div>
-        </article>
+        <!-- big images – now responsive -->
+            <div class="image-block">
+            <img class="responsive-img home_page_1"
+               src="home_page_1.jpg"
+               alt="Main concert image 1">
+            </div>
 
-        <aside class="details-side">
-          <div class="box box-large"></div>
-          <div class="box box-medium"></div>
-        </aside>
-      </div>
-    </section>
+            <div class="image-block">
+            <img class="responsive-img home_page_2"
+               src="home_page_2.jpg"
+               alt="Main concert image 2">
+            </div>
+        </section>
 
-    <!-- CARD DETAILS -->
-    <section id="card" class="screen">
-      <h2 class="screen-title">Card details</h2>
+      <!-- DETAILS ABOUT ARTIST -->
+        <section id="details" class="page-section">
+            <h1 class="page-title">Details about artist</h1>
+            <div class="image-block">
+            <img class="responsive-img content-image"
+                src="artist_1.jpg"
+                alt="Artist photo 1">
+            </div>
 
-      <button class="btn back-btn" type="button">Back</button>
+            <div class="image-block">
+            <img class="responsive-img content-image"
+                src="artist_2.jpg"
+                alt="Artist photo 2">
+            </div>
+        </section>
+      <!-- TICKETS -->
+        <section id="tickets" class="page-section">
+            <h1 class="page-title">Tickets</h1>
 
-      <form class="form">
-        <label for="card-name">Card Name</label>
-        <input id="card-name" class="input" type="text" placeholder="Name on card" required>
+            <div class="image-block">
+                <img class="responsive-img ticket-image"
+                    src="tickets_1.jpg"
+                    alt="Tickets banner 1">
+            </div>
 
-        <label for="card-number">Card Number</label>
-        <input id="card-number" class="input" type="text" placeholder="xxxx xxxx xxxx xxxx" required>
+            <div class="image-block">
+                <img class="responsive-img ticket-image"
+                    src="tickets_2.jpg"
+                    alt="Tickets banner 2">
+            </div>
 
-        <label for="expiry">Expiry</label>
-        <input id="expiry" class="input" type="month" required>
+            <h2 class="section-title">Ticket Prices</h2>
+            <p>VIP – $280</p>
+            <p>CAT 1 – $210</p>
+            <p>CAT 2 – $180</p>
+            <p>CAT 3 – $140</p>
 
-        <label for="cvv">CVV</label>
-        <input id="cvv" class="input" type="password" maxlength="4" required>
+            <button class="btn btn-primary ticket-btn" onclick="showSection('card-details')">
+                Buy Now
+            </button>
+        </section>
 
-        <button class="btn" type="button" id="applePayButton">
-          Pay with Apple&nbsp;Pay
-        </button>
-      </form>
-    </section>
+      <!-- CARD DETAILS -->
+        <section id="card-details" class="page-section">
+            <button class="btn back-btn" onclick="showSection('tickets')">&lt; Back</button>
 
-    <!-- SIGN IN -->
-    <section id="signin" class="screen">
-         <h2 class="screen-title">Sign In</h2>
+            <h1 class="page-title">Card details</h1>
 
-  <form class="form sign-in-form">
-    <input class="input placeholder" type="text" placeholder="">
-    <input class="input placeholder" type="password" placeholder="">
-  </form>
+        <!-- small grey boxes = input fields -->
+            <form class="card-form">
+            <div class="form-group">
+                <label class="label" for="cardName">Name on card</label>
+                <input id="cardName" type="text" required>
+            </div>
 
-  <h2 class="screen-title">Sign Up</h2>
+            <div class="form-group">
+                <label class="label" for="cardNumber">Card number</label>
+                <input id="cardNumber" type="text" required>
+            </div>
 
-  <form class="form sign-up-form">
-    <input class="input placeholder" type="text" placeholder="">
-    <input class="input placeholder" type="password" placeholder="">
-  </form>
+            <div class="card-grid">
+                <div class="form-group">
+                    <label class="label" for="expiry">Expiry (MM/YY)</label>
+                    <input id="expiry" type="text" required>
+                </div>
 
-  <button class="btn long-btn"></button>
+                <div class="form-group">
+                    <label class="label" for="cvv">CVV</label>
+                    <input id="cvv" type="password" required>
+                </div>
+            </div>
 
-</section>
+            <div class="form-group">
+                <label class="label" for="postal">Postal code</label>
+                <input id="postal" type="text">
+            </div>
 
+          <!-- handled by JavaScript -->
+            <button id="applePayBtn" type="button" class="btn btn-primary">
+                Pay with Apple Pay
+            </button>
+            </form>
+        </section>
 
-    <!-- VENUES PAGE (separate screen like your last frame) -->
-    <section id="venues" class="screen">
-      <h2 class="screen-title">Venues</h2>
+      <!-- SIGN IN / SIGN UP -->
+        <section id="signin" class="page-section">
+            <h1 class="page-title">Sign In</h1>
 
-      <div class="venues-layout">
-        <div class="box box-large"></div>
-        <div class="box box-large"></div>
-      </div>
-    </section>
+            <section class="auth-section">
+                <h2 class="section-title">Sign In</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="label" for="signin-email">Email</label>
+                        <input id="signin-email" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="signin-password">Password</label>
+                        <input id="signin-password" type="password" required>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Sign In</button>
+                </form>
+            </section>
 
-  </main>
+            <section class="auth-section">
+                <h2 class="section-title">Sign Up</h2>
+                <form>
+                <div class="form-group">
+                    <label class="label" for="signup-email">Email</label>
+                    <input id="signup-email" type="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="label" for="signup-password">Password</label>
+                    <input id="signup-password" type="password" required>
+                </div>
+                <button class="btn" type="submit">Create account</button>
+            </form>
+            </section>
+        </section>
 
-  <footer class="site-footer">
-    <p class="small-text">&copy; 2025 Concert Wireframe</p>
-  </footer>
+      <!-- VENUES -->
+        <section id="venues" class="page-section">
+            <h1 class="page-title">Venues</h1>
+            <div class="venues-layout">
+            <div class="venues-left">
+      <!-- big purple placeholder box like wireframe -->
+            </div>
+            <div class="image-block">
+                <img class="responsive-img ticket-image"
+                    src="venue_1.jpeg"
+                    alt="TXT">
+            </div>
+
+            <div class="venues-right">
+                <h2 class="section-title">Performance Venues</h2>
+                <p>• Singapore Indoor Stadium</p>
+                <p>• National Stadium</p>
+                <p>• The Star Theatre</p>
+                <p>• Esplanade Concert Hall</p>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -1,4 +1,4 @@
-/* BASIC RESET */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,277 +7,217 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f3f3f3;
-  color: #fdfdfd;
+  background-color: #150732; /* dark purple background */
+  color: #ffffff;
 }
 
-/* HEADER + NAV */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+
+/* ----- HEADER + NAV ----- */
 
 .site-header {
-  background-color: #130b2f;
-  border-bottom: 1px solid #21032c;
+  background-color: #9712a0; /* banner colour */
+  width: 100%;
 }
 
-.top-nav {
-  max-width: 1100px;
+/* centre the nav content inside the banner */
+.main-nav {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 12px 16px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
+
+.nav-brand {
+  font-weight: bold;
   font-size: 18px;
 }
 
-.nav-links {
+.nav-list {
   list-style: none;
   display: flex;
-  gap: 12px;
+  gap: 24px;
 }
 
-.nav-links a {
+.nav-list a {
   text-decoration: none;
-  color: #f9f8f8;
+  color: #ffffff;
   font-size: 14px;
 }
 
-.nav-links a:hover {
+.nav-list a:hover {
   text-decoration: underline;
 }
 
-/* GENERAL SCREEN LAYOUT */
+/* ----- MAIN LAYOUT ----- */
 
-.screen {
-  max-width: 1100px;
-  margin: 16px auto;
-  padding: 16px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+main {
+  padding: 24px; /* spacing like wireframe */
 }
 
-.screen-title {
-  margin-bottom: 12px;
-  font-size: 18px;
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.sub-title {
-  margin: 16px 0 8px;
+.page-section {
+  display: none;
+}
+
+.section-title {
   font-size: 16px;
+  margin: 16px 0 24px;
 }
 
-/* PLACEHOLDER BOXES (the grey rectangles) */
 
-.box {
-  background-color: #e0e0e0;
-  margin-bottom: 12px;
+/* Show home first */
+#home {
+  display: block;
 }
 
-.box-large {
-  height: 180px;
+/* ----- IMAGE BLOCKS ----- */
+
+.image-block {
+  margin-bottom: 24px;
 }
 
-.box-medium {
-  height: 120px;
+/* Applies to ALL images */
+.responsive-img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
 }
 
-.box-small {
-  height: 60px;
+/* If image missing, show grey placeholder look */
+.hero-image,
+.ticket-image,
+.content-image {
+  background-color: #3a2d3f;
 }
 
-/* HOME PAGE */
-
-.home-hero {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* Applies to your home images as well */
+.home_page_1,
+.home_page_2 {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
 }
 
-/* tickets */
+/* ----- FORMS ----- */
 
-.tickets-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.form-group {
+  margin-bottom: 16px;
 }
 
-.ticket-side {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
 }
 
-.ticket-info-list {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #d4d3d3;
+  color: #000000;
+  border-radius: 4px;
+}
+
+/* ------- BUTTONS ------- */
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: #dddddd;
+}
+
+.back-btn {
+  margin-bottom: 16px;
+}
+
+/* Tickets list placeholder lines */
+.ticket-list {
   list-style: none;
+  margin: 12px 0 24px;
+}
+
+.ticket-list li {
+  height: 16px;
+  background-color: #d4d3d3;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+/* Card details side-by-side fields */
+.card-grid {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  gap: 12px;
+}
+.ticket-btn {
+  margin-top: 20px;   /* adds gap between prices and button */
 }
 
-.ticket-info-list .line {
-  height: 8px;
-  background-color: #cccccc;
-  width: 60%;
-}
-
-/* venues */
+/* VENUES SECTION */
 
 .venues-layout {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
-/* DETAILS PAGE */
-
-.details-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.venues-left {
+  background-color: #3a2d3f;
+  min-height: 260px;
+  border-radius: 6px;
 }
 
-.details-main,
-.details-side {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.venues-right {
+  padding: 16px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 6px;
 }
 
-/* FORMS */
+/* ----- DESKTOP LAYOUT ----- */
 
-.form {
-  max-width: 360px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-label {
-  font-size: 14px;
-}
-
-.input {
-  height: 32px;
-  padding: 4px 8px;
-  border: 1px solid #cccccc;
-  background-color: #f2f2f2;
-}
-
-.btn {
-  border: 1px solid #999999;
-  background-color: #f7f7f7;
-  padding: 6px 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #e6e6e6;
-}
-
-.back-btn {
-  margin-bottom: 12px;
-}
-
-/* APPLE PAY MESSAGE */
-
-.apple-message {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.apple-message p {
-  font-size: 16px;
-}
-
-/* FOOTER */
-
-.site-footer {
-  text-align: center;
-  padding: 12px;
-  font-size: 12px;
-  color: #777777;
-}
-
-.small-text {
-  font-size: 12px;
-}
-
-/* -----------------------------
-   DESKTOP LAYOUT (LEFT SIDE)
-   ----------------------------- */
-
-@media (min-width: 900px) {
-
- 
-
-  .tickets-layout {
-    flex-direction: row; /* big image + side info */
-    align-items: flex-start;
-  }
-
-  .tickets-layout .box-large {
-    flex: 2;
-  }
-
-  .ticket-side {
-    flex: 1;
+@media screen and (min-width: 768px) {
+  
+  main {
+    padding: 40px;
   }
 
   .venues-layout {
     flex-direction: row;
   }
 
-  .details-layout {
-    flex-direction: row;         /* main + aside side by side */
-  }
-
-  .details-main {
+  .venues-left {
     flex: 2;
   }
 
-  .details-side {
-    flex: 1.5;
-  }
-
-  .venues-layout .box-large {
+  .venues-right {
     flex: 1;
   }
-}
-/* SIGN IN + SIGN UP LAYOUT */
-
-#signin {
-  background-color: #ffffff;
-  padding: 24px;
-  border: 1px solid #dddddd;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.screen-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 24px 0 12px;
-}
-
-/* grey rectangles */
-
-.placeholder {
-  background-color: #dcdcdc;
-  border: none;
-  height: 35px;
-  margin-bottom: 16px;
-}
-
-/* long button rectangle */
-
-.long-btn {
-  width: 60%;
-  height: 35px;
-  background-color: #dcdcdc;
-  border: none;
-  margin: 24px auto 0;
-  display: block;
 }
