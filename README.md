@@ -25,6 +25,11 @@ Features
 
     -Venue list
 
+Testing
+    -https://validator.w3.org/
+    -https://jigsaw.w3.org/css-validator/
+    -Chatgpt to check for error and improvements
+
 External Sources
     -YouTube embed
 
