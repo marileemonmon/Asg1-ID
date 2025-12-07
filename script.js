@@ -22,6 +22,11 @@ if (applePayButton) {
     alert("Apple Pay successful");
   };
 }
+// Handle Pay button popup
+var payButton = document.getElementById('PayBtn');
 
-
-
+if (payButton) {
+  payButton.onclick = function () {
+    alert("Payment successful");
+  };
+}

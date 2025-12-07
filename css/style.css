@@ -185,6 +185,26 @@ input[type="number"] {
 .back-btn {
   margin-bottom: 16px;
 }
+/*----- payment buttons -----*/
+/* Pay row: box on left, Apple Pay button on right */
+.pay-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+.paybtn, #applePayBtn{
+  flex: 1;                   /* make buttons same width */
+  margin: 0 8px;            /* space between buttons */
+  color: #ffffff;
+  background-color: #000000;
+}
+.paybtn, #PayBtn {
+  margin-left: 0 8px;
+  color: #ffffff;
+  background-color:#000000;
+}
+
 /* ----- DETAILS ABOUT ARTIST LAYOUT ----- */
 
 .details-layout {
