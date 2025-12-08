@@ -1,3 +1,6 @@
+/* =========================
+   GLOBAL
+   ========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,15 +19,14 @@ body {
   background-color: transparent;
 }
 
-
-/* ----- HEADER + NAV ----- */
-
+/* =========================
+   HEADER + NAV
+   ========================= */
 .site-header {
-  background-color: #520380; /* banner colour */
+  background-color: #000000; /* banner colour */
   width: 100%;
 }
 
-/* centre the nav content inside the banner */
 .main-nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -53,39 +55,37 @@ body {
   white-space: nowrap;
 }
 
-/* Mobile header layout */
-@media screen and (max-width: 600px) {
+.nav-list a:hover {
+  text-decoration: underline;
+}
 
-  /* Stack brand on top, menu below */
+/* Mobile nav */
+@media screen and (max-width: 600px) {
   .main-nav {
     flex-direction: column;
     align-items: center;
   }
 
   .nav-brand {
-    margin-bottom: 4px;  /* small gap below "Concert" */
+    margin-bottom: 4px;
   }
 
   .nav-list {
-    flex-wrap: wrap;     /* allow items to go to next row */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;           /* space between menu items */
+    gap: 8px;
   }
 
   .nav-list a {
-    font-size: 12px;     /* keep readable */
-    white-space: nowrap; /* keep each label on one line */
+    font-size: 12px;
   }
 }
 
-.nav-list a:hover {
-  text-decoration: underline;
-}
-
-/* ----- MAIN LAYOUT ----- */
-
+/* =========================
+   MAIN / GENERAL
+   ========================= */
 main {
-  padding: 24px; /* spacing like wireframe */
+  padding: 24px;
 }
 
 .page-title {
@@ -93,7 +93,6 @@ main {
   margin-bottom: 20px;
 }
 
-/* sections are now visible by default */
 .page-section {
   margin-bottom: 40px;
 }
@@ -103,37 +102,28 @@ main {
   margin: 16px 0 24px;
 }
 
-
-/* ----- IMAGE BLOCKS ----- */
-
+/* =========================
+   IMAGES
+   ========================= */
 .image-block {
   margin-bottom: 24px;
 }
 
-/* Applies to ALL images */
 .responsive-img {
   width: 100%;
   display: block;
   border-radius: 6px;
 }
 
-/* If image missing, show grey placeholder look */
 .hero-image,
 .ticket-image,
 .content-image {
   background-color: #3a2d3f;
 }
 
-/* Applies to your home images as well */
-.home_page_1,
-.home_page_2 {
-  width: 100%;
-  display: block;
-  border-radius: 6px;
-}
-
-/* ----- FORMS ----- */
-
+/* =========================
+   FORMS
+   ========================= */
 .form-group {
   margin-bottom: 16px;
 }
@@ -156,8 +146,9 @@ input[type="number"] {
   border-radius: 4px;
 }
 
-/* ------- BUTTONS ------- */
-
+/* =========================
+   BUTTONS
+   ========================= */
 .btn {
   padding: 10px 18px;
   border: none;
@@ -178,8 +169,7 @@ input[type="number"] {
   margin-bottom: 16px;
 }
 
-/*----- payment buttons -----*/
-/* Pay row: Pay + Apple Pay buttons side by side */
+/* Payment buttons row */
 .pay-row {
   display: flex;
   gap: 12px;
@@ -192,47 +182,36 @@ input[type="number"] {
   color: #ffffff;
 }
 
-/* ----- HOME HERO SECTION ----- */
-
+/* =========================
+   HOME HERO SECTION
+   ========================= */
 .hero-layout {
   display: flex;
   gap: 32px;
-  align-items: flex-start;   /* push everything up, no big empty gap */
+  align-items: flex-start;
   margin: 24px 0 32px;
 }
 
-/* Text panel on the left */
 .hero-left {
   flex: 1;
-  background-color: #1d0530; /* darker purple panel */
-  padding: 20px 24px;
-  border-radius: 8px;
+  background: linear-gradient(180deg, #2a0a43, #1b052e);
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-/* Images on the right */
 .hero-right {
   flex: 1;
 }
 
 .hero-right .image-block {
-  margin-bottom: 12px;       /* smaller gap between the two images */
-}
-
-.hero-left {
-  background: linear-gradient(180deg, #2a0a43, #1b052e);
-  padding: 24px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
-}
-
-/* Hero text */
-.hero-left {
-  font-size: 18px;          /* bigger text */
-  line-height: 1.5;         /* more readable spacing */
+  margin-bottom: 12px;
 }
 
 .hero-title {
-  font-size: 36px;          /* much larger title */
+  font-size: 36px;
   font-weight: bold;
   margin-bottom: 16px;
 }
@@ -242,7 +221,6 @@ input[type="number"] {
   margin-bottom: 20px;
 }
 
-/* Buttons row */
 .hero-buttons {
   display: flex;
   gap: 12px;
@@ -255,7 +233,6 @@ input[type="number"] {
   border: 1px solid #ffffff;
 }
 
-/* Highlights list */
 .hero-highlights {
   list-style: none;
   font-size: 13px;
@@ -265,20 +242,13 @@ input[type="number"] {
   margin-bottom: 4px;
 }
 
-/* Right side images */
-.hero-image-row {
-  display: flex;
-  gap: px;
-}
-
-/* Info strip under hero */
 .hero-info-strip {
   display: flex;
   gap: 16px;
   background-color: #2b0844;
   border-radius: 8px;
   padding: 12px 16px;
-  margin-bottom: 24px;      /* space before next section */
+  margin-bottom: 24px;
 }
 
 .hero-info-item h2 {
@@ -290,13 +260,9 @@ input[type="number"] {
   font-size: 13px;
 }
 
-/* Mobile: stack all */
+/* Home hero mobile */
 @media screen and (max-width: 600px) {
   .hero-layout {
-    flex-direction: column;
-  }
-
-  .hero-image-row {
     flex-direction: column;
   }
 
@@ -305,8 +271,54 @@ input[type="number"] {
   }
 }
 
-/* ----- DETAILS ABOUT ARTIST LAYOUT ----- */
 
+/*DETAILS PAGE
+*/
+
+/* Section with background image */
+#details {
+  position: relative;
+  background-image: url("../images/artist_2.jpg");
+  background-size: cover;          /* fill the area nicely */
+  background-position: center;     /* centre the image */
+  background-repeat: no-repeat;
+  padding: 40px 0 60px;            /* no horizontal padding here */
+  border-radius: 12px;
+  overflow: hidden;                /* clip the image to rounded corners */
+}
+
+/* Dark overlay so the image is softer */
+#details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 7, 50, 0.75);  /* dark purple overlay */
+}
+
+/* Actual content sits on top */
+.details-inner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Video at top, centered */
+.details-video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 32px auto;
+  width: 100%;
+}
+
+.details-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Layout: first image + white text box */
 .details-layout {
   display: flex;
   gap: 24px;
@@ -328,22 +340,19 @@ input[type="number"] {
   border-radius: 6px;
 }
 
-.details-intro {
-  margin-top: 12px;
-  margin-bottom: 8px;
+.details-right p {
+  margin-bottom: 12px;
 }
 
-/* Members section below the white box */
+/* Members section under description */
 .members-section {
   margin-top: 24px;
 }
 
-/* Intro text */
 .members-intro {
   margin-bottom: 8px;
 }
 
-/* Row of “buttons” that scroll to members */
 .member-links {
   display: flex;
   flex-wrap: wrap;
@@ -365,7 +374,6 @@ input[type="number"] {
   background-color: #e2e2e2;
 }
 
-/* Member cards */
 .member-card {
   display: flex;
   flex-wrap: wrap;
@@ -386,40 +394,25 @@ input[type="number"] {
   flex: 1;
 }
 
-/* ================================
-   MOBILE LAYOUT FOR DETAILS PAGE
-   ================================ */
+/* Details page mobile */
 @media screen and (max-width: 600px) {
+  #details {
+    padding: 24px 0 40px;
+  }
 
-  /* Top layout: images + white info box */
+  .details-inner {
+    padding: 0 16px;
+  }
+
   .details-layout {
     flex-direction: column;
     gap: 20px;
   }
 
-  .details-left {
-    width: 100%;
-  }
-
   .details-right {
     width: 100%;
-    padding: 14px;
   }
 
-  /* Make the video auto-resize */
-  .details-video {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;   /* keeps proper shape */
-  }
-
-  /* Reduce text size slightly for readability */
-  .details-right p {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
-  /* Member links (the jump-to buttons) */
   .member-links {
     justify-content: center;
     gap: 6px;
@@ -430,7 +423,6 @@ input[type="number"] {
     padding: 6px 10px;
   }
 
-  /* Member cards */
   .member-card {
     flex-direction: column;
     text-align: left;
@@ -439,8 +431,7 @@ input[type="number"] {
   .member-photo {
     width: 100%;
     max-width: 260px;
-    border-radius: 8px;
-    margin: 0 auto; /* center image */
+    margin: 0 auto;
   }
 
   .member-text {
@@ -451,38 +442,14 @@ input[type="number"] {
     font-size: 18px;
     margin-bottom: 8px;
   }
-
-  .members-section {
-    margin-top: 24px;
-  }
 }
 
-/* ----- TICKETS LAYOUT (old list, if you still use it anywhere) ----- */
 
-.ticket-list {
-  list-style: none;
-  margin: 12px 0 24px;
-}
+/* =========================
+   TICKETS PAGE
+   ========================= */
 
-.ticket-list li {
-  height: 16px;
-  background-color: #d4d3d3;
-  margin-bottom: 8px;
-  border-radius: 4px;
-}
-
-/* Card details side-by-side fields */
-.card-grid {
-  display: flex;
-  gap: 24px;
-}
-
-.ticket-btn {
-  margin-top: 20px;   /* adds gap between prices and button */
-}
-
-/* ----- TICKETS LAYOUT (card style) ----- */
-
+/* Grid of ticket cards */
 .ticket-grid {
   display: flex;
   flex-wrap: wrap;
@@ -490,31 +457,46 @@ input[type="number"] {
   margin-bottom: 16px;
 }
 
+/* Base ticket card */
 .ticket-card {
-  flex: 1 1 220px;
-  background-color: #300a4c;
-  border-radius: 6px;
-  padding: 12px;
+  flex: 1 1 240px;
+  padding: 16px;
+  border-radius: 10px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-.ticket-thumb {
-  margin-bottom: 8px;
+/* Ticket colours */
+.ticket-card.vip {
+  background-color: #ffb3c6;   /* VIP – pink */
+}
+
+.ticket-card.cat1 {
+  background-color: #f4f435;   /* CAT 1 – yellow */
+}
+
+.ticket-card.cat2 {
+  background-color: #6e8cfa;   /* CAT 2 – blue */
+}
+
+.ticket-card.cat3 {
+  background-color: #9bf29b;   /* CAT 3 – green */
 }
 
 .ticket-type {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 4px;
 }
 
 .ticket-price {
   font-size: 15px;
-  margin-bottom: 4px;
 }
 
 .ticket-desc {
   font-size: 13px;
-  color: #e0d4f5;
 }
 
 .ticket-select {
@@ -535,48 +517,34 @@ input[type="number"] {
   font-size: 14px;
   margin-bottom: 16px;
 }
-/* Ticket card colours */
-.ticket-card.vip {
-  background-color: #ffb3c6;   /* light pink */
-}
 
-.ticket-card.cat1 {
-  background-color: #f4f435;   /* light purple */
-}
-
-.ticket-card.cat2 {
-  background-color: #6e8cfa;   /* light blue */
-}
-
-.ticket-card.cat3 {
-  background-color: #ea0000;   /* light green */
-}
-.ticket-card {
-  flex: 1 1 240px;
-  padding: 16px;
-  border-radius: 10px;
-  color: #000000;
+/* Card details side-by-side fields */
+.card-grid {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  gap: 24px;
 }
 
+.ticket-btn {
+  margin-top: 20px;
+}
 
-
-/* Stack ticket cards on small screens */
+/* Tickets mobile */
 @media screen and (max-width: 600px) {
   .ticket-grid {
     flex-direction: column;
   }
+
+  .card-grid {
+    flex-direction: column;
+  }
 }
 
-/* VENUES SECTION */
-
-/* DESKTOP / DEFAULT LAYOUT – side by side */
+/* =========================
+   VENUES PAGE
+   ========================= */
 .venues-layout {
   display: flex;
-  flex-direction: row;   /* row by default */
+  flex-direction: row;
   gap: 16px;
 }
 
@@ -615,20 +583,18 @@ input[type="number"] {
   font-size: 13px;
 }
 
-/* MOBILE LAYOUT – stack top and bottom like wireframe */
+/* Venues mobile */
 @media screen and (max-width: 600px) {
-
   .venues-layout {
-    flex-direction: column;   /* column on small screens */
+    flex-direction: column;
   }
 
   .venues-left,
   .venues-right {
-    width: 100%;              /* full width */
+    width: 100%;
   }
 
   .venues-right {
-    margin-top: 16px;         /* gap between image and white box */
+    margin-top: 16px;
   }
 }
-
