@@ -1,5 +1,3 @@
-// Test: this should show when payment.html loads
-alert("JS file loaded");
 
 // Pay button
 var payBtn = document.getElementById("PayBtn");
