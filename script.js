@@ -1,32 +1,18 @@
-// Function to show only one section at a time
-function showSection(sectionId) {
+// Test: this should show when payment.html loads
+alert("JS file loaded");
 
-  // Hide all sections (ONLY ones you have)
-  document.getElementById('home').style.display = 'none';
-  document.getElementById('details').style.display = 'none';
-  document.getElementById('tickets').style.display = 'none';
-  document.getElementById('card-details').style.display = 'none';
-  document.getElementById('signin').style.display = 'none';
-  document.getElementById('venues').style.display = 'none';
-
-  // Show the section requested
-  var section = document.getElementById(sectionId);
-  section.style.display = 'block';
-}
-
-// Handle Apple Pay popup
-var applePayButton = document.getElementById('applePayBtn');
-
-if (applePayButton) {
-  applePayButton.onclick = function () {
-    alert("Apple Pay successful");
+// Pay button
+var payBtn = document.getElementById("PayBtn");
+if (payBtn) {
+  payBtn.onclick = function () {
+    alert("Payment successful!");
   };
 }
-// Handle Pay button popup
-var payButton = document.getElementById('PayBtn');
 
-if (payButton) {
-  payButton.onclick = function () {
-    alert("Payment successful");
+// Apple Pay button
+var applePayBtn = document.getElementById("applePayBtn");
+if (applePayBtn) {
+  applePayBtn.onclick = function () {
+    alert("Apple Pay payment successful!");
   };
 }

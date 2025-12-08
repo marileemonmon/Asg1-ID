@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets</title>
+  <link rel="stylesheet" href="css/normalise.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="page-container">
+      <nav class="main-nav">
+        <div class="nav-brand">Concert</div>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="details.html">Details about artist</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="venues.html">Venues</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <main>
+
+      <section id="tickets" class="page-section">
+        <h1 class="page-title">Tickets</h1>
+
+        <div class="image-block">
+          <img class="responsive-img ticket-image"
+               src="images/tickets_1.jpg"
+               alt="Tickets banner 1">
+        </div>
+
+        <div class="image-block">
+          <img class="responsive-img ticket-image"
+               src="images/tickets_2.jpg"
+               alt="Tickets banner 2">
+        </div>
+
+        <h2 class="section-title">Ticket Prices</h2>
+
+        <div class="ticket-grid">
+
+          <div class="ticket-card">
+            <img class="responsive-img ticket-thumb"
+                 src="images/ticket_vip.jpg"
+                 alt="VIP ticket image">
+            <h3 class="ticket-type">VIP</h3>
+            <p class="ticket-price">$280</p>
+            <p class="ticket-desc">Front row seats, closest to stage with best view.</p>
+
+            <label class="ticket-select">
+              <input type="checkbox" name="ticketOption" value="VIP – $280">
+              Select VIP
+            </label>
+          </div>
+
+          <div class="ticket-card">
+            <img class="responsive-img ticket-thumb"
+                 src="images/ticket_cat1.jpg"
+                 alt="CAT 1 ticket image">
+            <h3 class="ticket-type">CAT 1</h3>
+            <p class="ticket-price">$210</p>
+            <p class="ticket-desc">Lower tier seats with clear view of the performance.</p>
+
+            <label class="ticket-select">
+              <input type="checkbox" name="ticketOption" value="CAT 1 – $210">
+              Select CAT 1
+            </label>
+          </div>
+
+          <div class="ticket-card">
+            <img class="responsive-img ticket-thumb"
+                 src="images/ticket_cat2.jpg"
+                 alt="CAT 2 ticket image">
+            <h3 class="ticket-type">CAT 2</h3>
+            <p class="ticket-price">$180</p>
+            <p class="ticket-desc">Standard seats with a good balance of view and price.</p>
+
+            <label class="ticket-select">
+              <input type="checkbox" name="ticketOption" value="CAT 2 – $180">
+              Select CAT 2
+            </label>
+          </div>
+
+          <div class="ticket-card">
+            <img class="responsive-img ticket-thumb"
+                 src="images/ticket_cat3.jpg"
+                 alt="CAT 3 ticket image">
+            <h3 class="ticket-type">CAT 3</h3>
+            <p class="ticket-price">$140</p>
+            <p class="ticket-desc">Upper tier seats for budget-friendly fans.</p>
+
+            <label class="ticket-select">
+              <input type="checkbox" name="ticketOption" value="CAT 3 – $140">
+              Select CAT 3
+            </label>
+          </div>
+
+        </div>
+
+        <p class="ticket-note">
+          All prices are in SGD and include booking fees. Limited VIP tickets available.
+        </p>
+
+        <!-- Just go to a new page, no JS needed -->
+        <a href="payment.html" class="btn btn-primary ticket-btn">
+          Continue to Payment
+        </a>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+

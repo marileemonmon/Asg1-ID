@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="css/normalise.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="page-container">
+      <nav class="main-nav">
+        <div class="nav-brand">Concert</div>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="details.html">Details about artist</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="payment.html">Payment/a></li>
+          <li><a href="venues.html">Venues</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <main>
+
+      <!-- SIGN IN / SIGN UP -->
+      <section id="signin">
+        <h1 class="page-title">Sign In</h1>
+
+        <section class="auth-section">
+          <h2 class="section-title">Sign In</h2>
+          <form>
+            <div class="form-group">
+              <label class="label" for="signin-email">Email</label>
+              <input id="signin-email" type="email" required>
+            </div>
+            <div class="form-group">
+              <label class="label" for="signin-password">Password</label>
+              <input id="signin-password" type="password" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Sign In</button>
+          </form>
+        </section>
+
+        <section class="auth-section">
+          <h2 class="section-title">Sign Up</h2>
+          <form>
+            <div class="form-group">
+              <label class="label" for="signup-email">Email</label>
+              <input id="signup-email" type="email" required>
+            </div>
+            <div class="form-group">
+              <label class="label" for="signup-password">Password</label>
+              <input id="signup-password" type="password" required>
+            </div>
+            <button class="btn" type="submit">Create account</button>
+          </form>
+        </section>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
