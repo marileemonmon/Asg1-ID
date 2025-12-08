@@ -492,7 +492,7 @@ input[type="number"] {
 
 .ticket-card {
   flex: 1 1 220px;
-  background-color: #2b0844;
+  background-color: #300a4c;
   border-radius: 6px;
   padding: 12px;
 }
@@ -534,6 +534,32 @@ input[type="number"] {
 .selected-ticket {
   font-size: 14px;
   margin-bottom: 16px;
+}
+/* Ticket card colours */
+.ticket-card.vip {
+  background-color: #ffb3c6;   /* light pink */
+}
+
+.ticket-card.cat1 {
+  background-color: #f4f435;   /* light purple */
+}
+
+.ticket-card.cat2 {
+  background-color: #6e8cfa;   /* light blue */
+}
+
+.ticket-card.cat3 {
+  background-color: #ea0000;   /* light green */
+}
+.ticket-card {
+  flex: 1 1 240px;
+  padding: 16px;
+  border-radius: 10px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 
